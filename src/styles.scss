@@ -1,0 +1,27 @@
+@import "~ng2-toasty/style-bootstrap.css";
+
+$mainColor: #235bc4;
+$whiteColor: #fff;
+$grayColor: #f4f4f4;
+
+
+.centerize {
+  display: table;
+  height: 100%;
+  width: 100%;
+
+  .v-center {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+section {
+  padding: 40px 0;
+}
+
+.btn {
+  background-color: $mainColor;
+  border-color: $mainColor;
+  border-radius: 30px;
+}

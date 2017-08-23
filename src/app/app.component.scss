@@ -1,0 +1,58 @@
+@import './../styles.scss';
+
+nav {
+  background-color: $mainColor;
+  border: none;
+  border-radius: 0;
+  max-height: 90px;
+  margin-bottom: 0;
+  padding: 10px 0;
+
+  .navbar-nav {
+    & > li {
+      img {
+        max-width: 60px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 20px;
+      }
+
+      &.logout {
+        padding-left: 25px;
+
+        a {
+          color: $whiteColor;
+          margin-top: 20px;
+          cursor: pointer;
+
+          &:hover, &:focus {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      & > a {
+        padding: 0;
+      }
+    }
+    .user-info {
+      padding: 13px;
+      border-right: 1px solid rgba(255, 255, 255, 0.27);
+
+      h3 {
+        margin: 0;
+      }
+      .user-data {
+        display: inline-block;
+        vertical-align: middle;
+        color: $whiteColor;
+      }
+    }
+  }
+  .navbar-brand {
+    color: $whiteColor;
+    h2 {
+      margin: 0;
+    }
+  }
+}

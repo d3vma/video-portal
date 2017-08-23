@@ -1,0 +1,31 @@
+<section class="video">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="video-item">
+          <h3 class="title">{{video?.name}}</h3>
+          <video width="100%" height="400" controls>
+            <source [src]="video.url" type="video/mp4">
+          </video>
+          <p class="desc">{{video?.description}}</p>
+          <rating [(ngModel)]="video.rating" [max]="5" (ngModelChange)="rateVideo($event)"></rating>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="related-posts">
+          <h3 class="box-title">Related Videos</h3>
+          <div class="video-item" *ngFor="let videoItem of (videos | slice:videos.length -3)">
+            <h4 class="title">
+              <a href="/v/{{videoItem._id}}">{{videoItem?.name | truncate : 30}}</a>
+            </h4>
+            <video width="100%" height="200" controls>
+              <source [src]="videoItem.url" type="video/mp4">
+            </video>
+          </div>
+          <a routerLink="/" class="btn btn-primary btn-block">See all</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<ng2-toasty [position]="'top-center'"></ng2-toasty>
