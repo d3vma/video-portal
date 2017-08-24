@@ -75,6 +75,7 @@ export class VideoComponent implements OnInit {
      },
      err => {
        this.error = err;
+       this.toastyService.error(this.error);
        this.loading = false;
      }
     );
