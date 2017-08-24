@@ -11,10 +11,12 @@ export class SharedService {
     private router: Router
   ) { }
 
+  // Return SessionID from localstorage.
   sessionId() {
     return localStorage.getItem('sessionId');
   }
 
+  // Return Username from localstorage.
   userProfile() {
     return localStorage.getItem('username');
   }

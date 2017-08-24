@@ -31,6 +31,7 @@ export class VideosComponent implements OnInit {
     this.loading = true;
     this.user = this.sharedService.userProfile();
 
+    // Get all videos
     this.videosService.all().subscribe(
      res => {
        this.videos = res.data;

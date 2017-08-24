@@ -46,15 +46,14 @@ export class VideosService {
           .catch(this.handleError);
   }
 
+  // Rate videos and get the averege of data.
   rating(ratings) {
     if(!ratings) {
       return 0;
     }
-
     if(ratings.length <= 0) {
       return 0;
     }
-
     return ratings.reduce( (a, b) => a + b , 0 ) / ratings.length;
   }
 

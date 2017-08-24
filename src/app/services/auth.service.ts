@@ -16,10 +16,12 @@ export class AuthService {
   ) { }
 
 
+  // Check if user is logged in or not.
   isLoggedIn() {
     return localStorage.getItem("sessionId") == null  ? false : true ;
   }
 
+  // Authenticate user and convert to MD5 hash.
   authenticateUser(user): Observable<any> {
 
     user.password = Md5.hashStr(user.password);

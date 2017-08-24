@@ -41,6 +41,7 @@ export class VideoComponent implements OnInit {
     this.user = this.sharedService.userProfile();
     this.id = this.activatedRoute.snapshot.params["id"];
 
+    // Get the video data by ID(from activated route)
     this.videosService.video(this.id).subscribe(
      res => {
        this.video = res.data;
@@ -66,6 +67,7 @@ export class VideoComponent implements OnInit {
     );
   }
 
+  // Rating video function
   rateVideo(rating) {
     console.log('ee', rating);
     this.videosService.rate(this.id, rating).subscribe(
